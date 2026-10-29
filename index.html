@@ -1,607 +1,3161 @@
 
-<section id="portfolio">
-  <div class="container">
-    <div class="section-label">Portfólio</div>
-    <h2>O mar, a cozinha e as histórias.</h2>
-    <p class="intro">
-      Um pouco do meu trabalho e das experiências que
-      compartilho com o público: da pesca submarina
-      à gastronomia, passando pelas paisagens e
-      vivências da Bahia.
-    </p>
-
-    <div class="portfolio-grid">
-      <div>
-        <div class="portfolio-item">
-          <img src="images/foto-01.jpg"
-               alt="Pesca submarina"
-               loading="lazy">
-        </div>
-        <div class="portfolio-caption">Pesca submarina</div>
-      </div>
-
-      <div>
-        <div class="portfolio-item">
-          <img src="images/foto-02.jpg"
-               alt="Preparo de frutos do mar"
-               loading="lazy">
-        </div>
-        <div class="portfolio-caption">Da pesca à mesa</div>
-      </div>
-
-      <div>
-        <div class="portfolio-item">
-          <img src="images/foto-03.jpg"
-               alt="Gastronomia à beira-mar"
-               loading="lazy">
-        </div>
-        <div class="portfolio-caption">Gastronomia raiz</div>
-      </div>
-
-      <div>
-        <div class="portfolio-item">
-          <img src="images/foto-04.jpg"
-               alt="Paisagens da Ilha de Itaparica"
-               loading="lazy">
-        </div>
-        <div class="portfolio-caption">Vida na ilha</div>
-      </div>
-
-      <div>
-        <div class="portfolio-item">
-          <img src="images/foto-05.jpg"
-               alt="Experiência no mar"
-               loading="lazy">
-        </div>
-        <div class="portfolio-caption">Mar e aventura</div>
-      </div>
-
-      <div>
-        <div class="portfolio-item">
-          <img src="images/foto-06.jpg"
-               alt="Produção de conteúdo"
-               loading="lazy">
-        </div>
-        <div class="portfolio-caption">Conteúdo e parcerias</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b2438">
-  <meta name="description" content="Cleiton Reis — criador de conteúdo na Ilha de Itaparica. Pesca subaquática, gastronomia, praias e experiências na Bahia.">
-  <title>Cleiton Reis | O mar também é trabalho</title>
+
+  <meta name="theme-color" content="#0b202b">
+
+  <meta name="description" content="Cleiton Reis — criador de conteúdo digital da Ilha de Itaparica, Bahia. Pesca subaquática, gastronomia, turismo e experiências do mar à mesa.">
+
+  <meta property="og:title" content="Cleiton Reis | Do mar à mesa">
+
+  <meta property="og:description" content="Histórias reais da Bahia. Conheça meu trabalho e vamos criar juntos.">
+
+  <meta property="og:type" content="website">
+
+  <title>Cleiton Reis | Do mar à mesa</title>
 
   <style>
+
     :root {
-      --navy: #0b2438;
-      --blue: #176b87;
-      --aqua: #bce8e8;
-      --cream: #f7f6f0;
+
+      --navy: #0b202b;
+
+      --navy-light: #153746;
+
+      --ocean: #368b9c;
+
+      --sand: #e8d8bd;
+
+      --cream: #f8f6f0;
+
       --white: #ffffff;
-      --muted: #667985;
+
+      --muted: #aab8bb;
+
+      --ink: #15272d;
+
+      --line: rgba(255,255,255,.14);
+
+      --radius: 18px;
+
+      --max: 1160px;
+
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; }
 
     html {
+
       scroll-behavior: smooth;
+
+      scroll-padding-top: 90px;
+
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      color: var(--navy);
+
+      margin: 0;
+
       background: var(--cream);
-      line-height: 1.6;
+
+      color: var(--ink);
+
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+
+        Roboto, Helvetica, Arial, sans-serif;
+
+      line-height: 1.65;
+
+      -webkit-font-smoothing: antialiased;
+
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    body.menu-open { overflow: hidden; }
+
+    img { display: block; max-width: 100%; }
+
+    a { color: inherit; }
+
+    button, input, textarea, select { font: inherit; }
+
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    a:focus-visible, button:focus-visible,
+
+    input:focus-visible, textarea:focus-visible,
+
+    select:focus-visible {
+
+      outline: 3px solid #65b5c4;
+
+      outline-offset: 4px;
+
     }
 
     .container {
-      width: min(1100px, 90%);
-      margin: auto;
+
+      width: min(var(--max), calc(100% - 44px));
+
+      margin-inline: auto;
+
     }
 
-    header {
+    .section {
+
+      padding: 100px 0;
+
+    }
+
+    .section-dark {
+
       background: var(--navy);
+
       color: var(--white);
-      padding: 22px 0;
-    }
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .logo {
-      font-size: 19px;
-      font-weight: 800;
-      letter-spacing: 3px;
-    }
-
-    .nav a:last-child {
-      border: 1px solid #8ab9c6;
-      padding: 8px 14px;
-      border-radius: 30px;
-      font-size: 13px;
-    }
-
-    .hero {
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      color: white;
-      background:
-        linear-gradient(90deg, rgba(5, 25, 40, .9),
-        rgba(5, 25, 40, .25)),
-        url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
-    }
-
-    .hero-content {
-      max-width: 700px;
-      padding: 85px 0;
-    }
-
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--aqua);
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: clamp(42px, 9vw, 82px);
-      line-height: 1.03;
-      letter-spacing: -3px;
-      margin-bottom: 24px;
-    }
-
-    .hero p {
-      max-width: 530px;
-      color: #e1eeee;
-      font-size: 17px;
-      margin-bottom: 30px;
-    }
-
-    .button {
-      display: inline-block;
-      background: var(--aqua);
-      color: var(--navy);
-      padding: 13px 22px;
-      border-radius: 30px;
-      font-weight: 750;
-      font-size: 14px;
-      transition: transform .2s;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-    }
-
-    section {
-      padding: 75px 0;
     }
 
     .section-label {
-      color: var(--blue);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 11px;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-bottom: 18px;
+
+      color: var(--ocean);
+
+      font-size: .76rem;
+
       font-weight: 800;
-      margin-bottom: 12px;
+
+      letter-spacing: .17em;
+
+      text-transform: uppercase;
+
+    }
+
+    .section-dark .section-label { color: #91cbd4; }
+
+    .section-label::before {
+
+      content: "";
+
+      width: 25px;
+
+      height: 1px;
+
+      background: currentColor;
+
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2, h3 {
+
+      line-height: 1.12;
+
+      letter-spacing: -.035em;
+
+    }
+
+    h1, h2 {
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-weight: 500;
+
     }
 
     h2 {
-      font-size: clamp(29px, 5vw, 44px);
-      line-height: 1.15;
-      letter-spacing: -1px;
-      margin-bottom: 20px;
+
+      max-width: 800px;
+
+      margin-bottom: 22px;
+
+      font-size: clamp(2.25rem, 5vw, 4.1rem);
+
     }
 
-    .intro {
-      max-width: 700px;
-      color: var(--muted);
-      font-size: 16px;
+    h3 {
+
+      font-size: 1.22rem;
+
+      letter-spacing: -.02em;
+
     }
 
-    .stats {
-      background: var(--white);
-      padding: 35px 0;
+    .lead {
+
+      max-width: 680px;
+
+      color: #5f6d70;
+
+      font-size: 1.08rem;
+
     }
 
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+    .section-dark .lead { color: #bdcbcd; }
+
+    .eyebrow {
+
+      color: var(--sand);
+
+      font-size: .75rem;
+
+      font-weight: 800;
+
+      letter-spacing: .18em;
+
+      text-transform: uppercase;
+
+    }
+
+    .btn {
+
+      display: inline-flex;
+
+      min-height: 48px;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      padding: 13px 21px;
+
+      border: 1px solid transparent;
+
+      border-radius: 999px;
+
+      background: var(--ocean);
+
+      color: white;
+
+      text-decoration: none;
+
+      font-size: .92rem;
+
+      font-weight: 750;
+
+      cursor: pointer;
+
+      transition: transform .2s, background .2s;
+
+    }
+
+    .btn:hover {
+
+      background: #286f7e;
+
+      transform: translateY(-2px);
+
+    }
+
+    .btn-light {
+
+      background: var(--cream);
+
+      color: var(--navy);
+
+    }
+
+    .btn-light:hover {
+
+      background: var(--sand);
+
+      color: var(--navy);
+
+    }
+
+    .btn-outline {
+
+      border-color: rgba(255,255,255,.4);
+
+      background: transparent;
+
+      color: white;
+
+    }
+
+    .btn-outline:hover { background: rgba(255,255,255,.1); }
+
+    .btn-outline-dark {
+
+      border-color: #ccd3d1;
+
+      background: transparent;
+
+      color: var(--navy);
+
+    }
+
+    .btn-outline-dark:hover { background: #e9efec; }
+
+    .text-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      color: var(--ocean);
+
+      font-weight: 750;
+
+      text-decoration: none;
+
+    }
+
+    /* Navegação */
+
+    .site-header {
+
+      position: sticky;
+
+      z-index: 50;
+
+      top: 0;
+
+      border-bottom: 1px solid rgba(255,255,255,.1);
+
+      background: rgba(11,32,43,.97);
+
+      color: white;
+
+      backdrop-filter: blur(14px);
+
+    }
+
+    .nav {
+
+      display: flex;
+
+      min-height: 76px;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 22px;
+
+    }
+
+    .brand {
+
+      display: inline-flex;
+
+      flex-direction: column;
+
+      color: white;
+
+      text-decoration: none;
+
+      line-height: 1.05;
+
+    }
+
+    .brand strong {
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1.35rem;
+
+      font-weight: 500;
+
+      letter-spacing: -.03em;
+
+    }
+
+    .brand span {
+
+      margin-top: 6px;
+
+      color: #b7c8cb;
+
+      font-size: .62rem;
+
+      letter-spacing: .14em;
+
+      text-transform: uppercase;
+
+    }
+
+    .nav-links {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 22px;
+
+    }
+
+    .nav-links a {
+
+      color: #e2e9e9;
+
+      font-size: .82rem;
+
+      text-decoration: none;
+
+    }
+
+    .nav-links a:hover { color: #9ad2dc; }
+
+    .nav-links .nav-cta {
+
+      padding: 10px 15px;
+
+      border-radius: 999px;
+
+      background: var(--ocean);
+
+      color: white;
+
+      font-weight: 750;
+
+    }
+
+    .menu-toggle {
+
+      display: none;
+
+      width: 44px;
+
+      height: 44px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 12px;
+
+      background: transparent;
+
+      color: white;
+
+      font-size: 1.35rem;
+
+      cursor: pointer;
+
+    }
+
+    /* Espaços reservados para fotografias reais */
+
+    .photo-placeholder {
+
+      position: relative;
+
+      display: flex;
+
+      min-height: 230px;
+
+      align-items: center;
+
+      justify-content: center;
+
+      overflow: hidden;
+
+      border: 1px dashed rgba(255,255,255,.32);
+
+      border-radius: var(--radius);
+
+      background:
+
+        radial-gradient(ellipse at 15% 85%, rgba(54,139,156,.24), transparent 45%),
+
+        linear-gradient(145deg, #234856, #0d2631 72%);
+
+      color: #e5eeee;
+
       text-align: center;
+
     }
 
-    .stat strong {
+    .photo-placeholder::before {
+
+      position: absolute;
+
+      right: -30px;
+
+      bottom: -65px;
+
+      width: 220px;
+
+      height: 140px;
+
+      border: 1px solid rgba(255,255,255,.12);
+
+      border-radius: 50%;
+
+      content: "";
+
+      transform: rotate(-20deg);
+
+    }
+
+    .photo-placeholder::after {
+
+      position: absolute;
+
+      right: -50px;
+
+      bottom: -80px;
+
+      width: 300px;
+
+      height: 180px;
+
+      border: 1px solid rgba(255,255,255,.1);
+
+      border-radius: 50%;
+
+      content: "";
+
+      transform: rotate(-20deg);
+
+    }
+
+    .placeholder-inner {
+
+      position: relative;
+
+      z-index: 1;
+
+      max-width: 260px;
+
+      padding: 22px;
+
+    }
+
+    .placeholder-icon {
+
       display: block;
-      font-size: clamp(25px, 5vw, 38px);
-      letter-spacing: -1px;
+
+      margin-bottom: 12px;
+
+      font-size: 2rem;
+
     }
 
-    .stat span {
-      font-size: 12px;
-      color: var(--muted);
+    .placeholder-inner strong {
+
+      display: block;
+
+      font-size: .95rem;
+
     }
+
+    .placeholder-inner small {
+
+      display: block;
+
+      margin-top: 7px;
+
+      color: #b9cdd0;
+
+      font-size: .77rem;
+
+    }
+
+    .photo-placeholder img {
+
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+    }
+
+    .photo-placeholder.has-image .placeholder-inner { display: none; }
+
+    /* Abertura */
+
+    .hero {
+
+      position: relative;
+
+      display: flex;
+
+      min-height: min(780px, calc(100svh - 76px));
+
+      align-items: center;
+
+      overflow: hidden;
+
+      background:
+
+        radial-gradient(ellipse at 80% 10%, rgba(54,139,156,.28), transparent 40%),
+
+        linear-gradient(125deg, #0b202b 0%, #123747 60%, #0b202b 100%);
+
+      color: white;
+
+    }
+
+    .hero::after {
+
+      position: absolute;
+
+      right: -100px;
+
+      bottom: -210px;
+
+      width: 720px;
+
+      height: 420px;
+
+      border: 1px solid rgba(255,255,255,.09);
+
+      border-radius: 50%;
+
+      content: "";
+
+      transform: rotate(-17deg);
+
+    }
+
+    .hero-grid {
+
+      position: relative;
+
+      z-index: 1;
+
+      display: grid;
+
+      grid-template-columns: 1.04fr .96fr;
+
+      align-items: center;
+
+      gap: 64px;
+
+      padding-top: 72px;
+
+      padding-bottom: 90px;
+
+    }
+
+    .hero h1 {
+
+      max-width: 720px;
+
+      margin: 18px 0 24px;
+
+      font-size: clamp(3rem, 6.5vw, 6rem);
+
+      letter-spacing: -.055em;
+
+    }
+
+    .hero h1 em {
+
+      color: var(--sand);
+
+      font-weight: 400;
+
+    }
+
+    .hero-copy {
+
+      max-width: 550px;
+
+      color: #d2dfe0;
+
+      font-size: clamp(1rem, 1.8vw, 1.16rem);
+
+    }
+
+    .hero-actions {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 30px;
+
+    }
+
+    .hero-note {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-top: 35px;
+
+      color: #b7c8cb;
+
+      font-size: .79rem;
+
+    }
+
+    .hero-note span {
+
+      width: 30px;
+
+      height: 1px;
+
+      background: var(--sand);
+
+    }
+
+    .hero-visual {
+
+      position: relative;
+
+      padding: 0 0 30px 25px;
+
+    }
+
+    .hero-visual .photo-placeholder {
+
+      min-height: 470px;
+
+      border-color: rgba(255,255,255,.3);
+
+      border-radius: 170px 170px 20px 20px;
+
+      background:
+
+        radial-gradient(ellipse at 60% 35%, rgba(54,139,156,.5), transparent 40%),
+
+        linear-gradient(160deg, #2a6573, #0b202b);
+
+    }
+
+    .hero-caption {
+
+      position: absolute;
+
+      right: -8px;
+
+      bottom: 0;
+
+      width: min(255px, 80%);
+
+      padding: 18px 20px;
+
+      border: 1px solid rgba(255,255,255,.15);
+
+      border-radius: 14px;
+
+      background: #163744;
+
+      color: #dce7e7;
+
+      font-size: .83rem;
+
+    }
+
+    .hero-caption strong {
+
+      display: block;
+
+      margin-bottom: 4px;
+
+      color: white;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1.25rem;
+
+      font-weight: 500;
+
+    }
+
+    /* Sobre */
 
     .about-grid {
+
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
+
+      grid-template-columns: .92fr 1.08fr;
+
       align-items: center;
+
+      gap: 75px;
+
     }
 
-    .photo {
-      width: 100%;
-      min-height: 330px;
-      object-fit: cover;
-      border-radius: 4px;
+    .about-photo .photo-placeholder {
+
+      min-height: 530px;
+
+      border-color: #d4d9d4;
+
+      background: linear-gradient(145deg, #d9e3df, #a9c4c4);
+
+      color: var(--navy);
+
     }
 
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 25px;
+    .about-photo .placeholder-inner small { color: #52676c; }
+
+    .about-copy p { color: #526266; }
+
+    .about-signature {
+
+      margin-top: 28px;
+
+      padding-top: 20px;
+
+      border-top: 1px solid #d7ddda;
+
+      color: var(--navy);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1.35rem;
+
+      font-style: italic;
+
     }
 
-    .pill {
-      padding: 8px 13px;
-      border: 1px solid #d0dddc;
-      border-radius: 30px;
-      font-size: 12px;
-    }
+    /* Pilares */
 
-    .dark-section {
-      background: var(--navy);
-      color: white;
-    }
+    .pillar-grid {
 
-    .dark-section .intro {
-      color: #c4d7df;
-    }
-
-    .cards {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      margin-top: 35px;
+
+      grid-template-columns: repeat(4, minmax(0,1fr));
+
+      gap: 16px;
+
+      margin-top: 44px;
+
     }
 
-    .card {
-      padding: 28px;
-      background: rgba(255, 255, 255, .07);
-      border: 1px solid rgba(255, 255, 255, .13);
-      border-radius: 5px;
+    .pillar {
+
+      overflow: hidden;
+
+      border: 1px solid #e0e3df;
+
+      border-radius: var(--radius);
+
+      background: white;
+
     }
 
-    .card .number {
-      font-size: 12px;
-      color: var(--aqua);
-      letter-spacing: 2px;
+    .pillar .photo-placeholder {
+
+      min-height: 210px;
+
+      border: 0;
+
+      border-radius: 0;
+
     }
 
-    .card h3 {
-      font-size: 21px;
-      margin: 12px 0;
+    .pillar-content { padding: 23px; }
+
+    .pillar-content p {
+
+      margin-bottom: 0;
+
+      color: #627074;
+
+      font-size: .91rem;
+
     }
 
-    .card p {
-      color: #c4d7df;
-      font-size: 14px;
+    /* Portfólio */
+
+    .portfolio-head {
+
+      display: flex;
+
+      align-items: end;
+
+      justify-content: space-between;
+
+      gap: 25px;
+
+    }
+
+    .portfolio-head > div:first-child { max-width: 720px; }
+
+    .filter-list {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin: 32px 0 25px;
+
+    }
+
+    .filter-btn {
+
+      min-height: 42px;
+
+      padding: 9px 15px;
+
+      border: 1px solid #d4dcda;
+
+      border-radius: 999px;
+
+      background: transparent;
+
+      color: var(--ink);
+
+      font-size: .83rem;
+
+      cursor: pointer;
+
+    }
+
+    .filter-btn[aria-pressed="true"] {
+
+      border-color: var(--navy);
+
+      background: var(--navy);
+
+      color: white;
+
     }
 
     .portfolio-grid {
+
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      margin-top: 32px;
+
+      grid-template-columns: repeat(3, minmax(0,1fr));
+
+      gap: 18px;
+
     }
 
-    .portfolio-item {
-      min-height: 190px;
-      background: #dbe7e6;
+    .portfolio-card {
+
       overflow: hidden;
-      position: relative;
+
+      border: 1px solid #e0e3df;
+
+      border-radius: var(--radius);
+
+      background: white;
+
     }
 
-    .portfolio-item img {
-      width: 100%;
-      height: 100%;
-      min-height: 190px;
-      object-fit: cover;
+    .portfolio-card[hidden] { display: none; }
+
+    .portfolio-card .photo-placeholder {
+
+      min-height: 260px;
+
+      border: 0;
+
+      border-radius: 0;
+
+    }
+
+    .portfolio-meta { padding: 19px 20px 22px; }
+
+    .portfolio-category {
+
       display: block;
-      transition: transform .4s;
+
+      margin-bottom: 8px;
+
+      color: var(--ocean);
+
+      font-size: .7rem;
+
+      font-weight: 800;
+
+      letter-spacing: .12em;
+
+      text-transform: uppercase;
+
     }
 
-    .portfolio-item:hover img {
-      transform: scale(1.04);
+    .portfolio-meta h3 { margin-bottom: 9px; }
+
+    .portfolio-meta p {
+
+      margin-bottom: 0;
+
+      color: #637174;
+
+      font-size: .87rem;
+
     }
 
-    .portfolio-caption {
-      padding: 12px 0;
-      font-size: 13px;
-      font-weight: 700;
+    .portfolio-note {
+
+      margin-top: 22px;
+
+      color: #697578;
+
+      font-size: .82rem;
+
     }
 
-    .collab {
-      background: #e5efeb;
+    /* Números */
+
+    .stats-intro {
+
+      display: flex;
+
+      align-items: end;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
     }
 
-    .collab-box {
-      max-width: 750px;
-      margin: auto;
-      text-align: center;
+    .stats-intro p { max-width: 420px; }
+
+    .stats-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, minmax(0,1fr));
+
+      gap: 20px;
+
+      margin-top: 35px;
+
     }
 
-    .collab-box .intro {
-      margin: 0 auto 28px;
+    .stats-card {
+
+      padding: 32px;
+
+      border: 1px solid var(--line);
+
+      border-radius: var(--radius);
+
+      background: rgba(255,255,255,.035);
+
     }
 
-    footer {
+    .stats-platform {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding-bottom: 22px;
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+    .stats-platform h3 {
+
+      margin: 0;
+
+      font-size: 1.3rem;
+
+    }
+
+    .stats-platform span {
+
+      color: #b5c5c8;
+
+      font-size: .78rem;
+
+    }
+
+    .stats-numbers {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, minmax(0,1fr));
+
+      gap: 18px;
+
+      padding-top: 25px;
+
+    }
+
+    .stat strong {
+
+      display: block;
+
+      color: var(--sand);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(1.45rem, 3vw, 2.35rem);
+
+      font-weight: 500;
+
+      line-height: 1.1;
+
+    }
+
+    .stat span {
+
+      display: block;
+
+      margin-top: 9px;
+
+      color: #bac8ca;
+
+      font-size: .78rem;
+
+      line-height: 1.45;
+
+    }
+
+    .stats-footnote {
+
+      margin-top: 22px;
+
+      color: #a9babc;
+
+      font-size: .78rem;
+
+    }
+
+    /* Diferenciais */
+
+    .benefit-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, minmax(0,1fr));
+
+      gap: 20px;
+
+      margin-top: 40px;
+
+    }
+
+    .benefit {
+
+      padding: 29px;
+
+      border-top: 2px solid var(--ocean);
+
+      background: white;
+
+    }
+
+    .benefit-number {
+
+      display: block;
+
+      margin-bottom: 24px;
+
+      color: var(--ocean);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1.8rem;
+
+    }
+
+    .benefit p {
+
+      margin-bottom: 0;
+
+      color: #627074;
+
+    }
+
+    /* Soluções comerciais */
+
+    .service-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, minmax(0,1fr));
+
+      gap: 15px;
+
+      margin-top: 40px;
+
+    }
+
+    .service {
+
+      padding: 26px;
+
+      border: 1px solid var(--line);
+
+      border-radius: var(--radius);
+
+      background: rgba(255,255,255,.035);
+
+    }
+
+    .service-icon {
+
+      display: inline-flex;
+
+      width: 44px;
+
+      height: 44px;
+
+      align-items: center;
+
+      justify-content: center;
+
+      margin-bottom: 21px;
+
+      border-radius: 12px;
+
+      background: rgba(145,203,212,.12);
+
+      color: #a7dbe2;
+
+      font-size: 1.2rem;
+
+    }
+
+    .service p {
+
+      margin-bottom: 0;
+
+      color: #bdcbcd;
+
+      font-size: .91rem;
+
+    }
+
+    .services-cta { margin-top: 36px; }
+
+    /* Do mar à mesa */
+
+    .experience-grid {
+
+      display: grid;
+
+      grid-template-columns: .8fr 1.2fr;
+
+      align-items: center;
+
+      gap: 60px;
+
+    }
+
+    .experience-copy p { color: #58686c; }
+
+    .experience-steps {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, minmax(0,1fr));
+
+      gap: 12px;
+
+      margin-top: 26px;
+
+    }
+
+    .experience-step .photo-placeholder {
+
+      min-height: 190px;
+
+      border-color: #d2d9d6;
+
+      border-radius: 13px;
+
+      background: linear-gradient(145deg, #d6e1dc, #9bb9ba);
+
+      color: var(--navy);
+
+    }
+
+    .experience-step .placeholder-inner small { color: #52676c; }
+
+    .experience-step span {
+
+      display: block;
+
+      margin-top: 12px;
+
+      font-size: .83rem;
+
+      font-weight: 750;
+
+    }
+
+    /* Contato */
+
+    .contact-grid {
+
+      display: grid;
+
+      grid-template-columns: .9fr 1.1fr;
+
+      gap: 65px;
+
+    }
+
+    .contact-copy > p { color: #bdcbcd; }
+
+    .contact-list {
+
+      display: grid;
+
+      gap: 14px;
+
+      margin-top: 28px;
+
+    }
+
+    .contact-item {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 2px;
+
+      padding-bottom: 13px;
+
+      border-bottom: 1px solid var(--line);
+
+      overflow-wrap: anywhere;
+
+    }
+
+    .contact-item span {
+
+      color: #9fb3b7;
+
+      font-size: .76rem;
+
+    }
+
+    .contact-item a {
+
+      color: white;
+
+      text-decoration: none;
+
+    }
+
+    .contact-item a:hover { color: #a6dce3; }
+
+    .contact-socials {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 25px;
+
+    }
+
+    .contact-form {
+
+      padding: 30px;
+
+      border: 1px solid var(--line);
+
+      border-radius: var(--radius);
+
+      background: rgba(255,255,255,.045);
+
+    }
+
+    .contact-form h3 {
+
+      margin-bottom: 8px;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1.65rem;
+
+      font-weight: 500;
+
+    }
+
+    .form-help {
+
+      margin-bottom: 24px;
+
+      color: #bdcbcd;
+
+      font-size: .84rem;
+
+    }
+
+    .field { margin-bottom: 16px; }
+
+    .field label {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #e5eded;
+
+      font-size: .82rem;
+
+      font-weight: 650;
+
+    }
+
+    .field input, .field textarea, .field select {
+
+      width: 100%;
+
+      min-height: 47px;
+
+      padding: 12px 13px;
+
+      border: 1px solid rgba(255,255,255,.2);
+
+      border-radius: 10px;
+
+      background: #102e3b;
+
+      color: white;
+
+    }
+
+    .field textarea {
+
+      min-height: 115px;
+
+      resize: vertical;
+
+    }
+
+    .field select option { background: var(--navy); }
+
+    .field input::placeholder, .field textarea::placeholder {
+
+      color: #9cb1b5;
+
+    }
+
+    .form-disclaimer {
+
+      margin: 13px 0 0;
+
+      color: #aabdc0;
+
+      font-size: .74rem;
+
+    }
+
+    /* Rodapé */
+
+    .site-footer {
+
       padding: 32px 0;
-      background: #071925;
-      color: #d8e6e9;
-      text-align: center;
-      font-size: 12px;
+
+      background: #071820;
+
+      color: #b7c5c7;
+
     }
 
-    footer p + p {
-      margin-top: 7px;
-      color: #93acb6;
+    .footer-row {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 22px;
+
     }
 
-    @media (max-width: 650px) {
-      .hero {
-        min-height: 470px;
-      }
+    .footer-brand {
 
-      .about-grid,
-      .cards {
-        grid-template-columns: 1fr;
-      }
+      color: white;
 
-      .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
+      font-family: Georgia, "Times New Roman", serif;
 
-      .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      font-size: 1.15rem;
 
-      .photo {
-        min-height: 250px;
-      }
-
-      section {
-        padding: 55px 0;
-      }
-
-      h1 {
-        letter-spacing: -2px;
-      }
     }
+
+    .footer-row p {
+
+      margin: 5px 0 0;
+
+      font-size: .78rem;
+
+    }
+
+    .footer-links {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 15px;
+
+    }
+
+    .footer-links a {
+
+      color: #d0dada;
+
+      font-size: .8rem;
+
+      text-decoration: none;
+
+    }
+
+    .footer-links a:hover { color: white; }
+
+    /* Responsividade */
+
+    @media (max-width: 1000px) {
+
+      .nav-links { gap: 13px; }
+
+      .nav-links a { font-size: .77rem; }
+
+      .hero-grid { gap: 35px; }
+
+      .pillar-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+      .portfolio-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+      .about-grid { gap: 40px; }
+
+      .experience-grid { gap: 35px; }
+
+      .contact-grid { gap: 35px; }
+
+    }
+
+    @media (max-width: 760px) {
+
+      .container { width: min(100% - 34px, var(--max)); }
+
+      .section { padding: 70px 0; }
+
+      .nav { min-height: 68px; }
+
+      .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+
+      .nav-links {
+
+        position: fixed;
+
+        inset: 68px 0 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        overflow-y: auto;
+
+        padding: 18px 24px 35px;
+
+        background: var(--navy);
+
+      }
+
+      .nav-links.open { display: flex; }
+
+      .nav-links a {
+
+        padding: 15px 0;
+
+        border-bottom: 1px solid var(--line);
+
+        font-size: 1rem;
+
+      }
+
+      .nav-links .nav-cta {
+
+        margin-top: 18px;
+
+        padding: 14px 18px;
+
+        border-bottom: 0;
+
+        text-align: center;
+
+      }
+
+      .hero { min-height: auto; }
+
+      .hero-grid { grid-template-columns: 1fr; gap: 35px; padding-top: 65px; padding-bottom: 70px; }
+
+      .hero h1 { font-size: clamp(3rem, 13vw, 5rem); }
+
+      .hero-visual { max-width: 520px; padding-left: 0; }
+
+      .hero-visual .photo-placeholder { min-height: 390px; border-radius: 140px 140px 18px 18px; }
+
+      .hero-caption { right: 0; }
+
+      .about-grid, .experience-grid, .contact-grid { grid-template-columns: 1fr; gap: 35px; }
+
+      .about-photo { max-width: 560px; }
+
+      .about-photo .photo-placeholder { min-height: 400px; }
+
+      .pillar-grid { gap: 12px; }
+
+      .pillar-content { padding: 18px; }
+
+      .pillar .photo-placeholder { min-height: 175px; }
+
+      .portfolio-head, .stats-intro { align-items: start; flex-direction: column; }
+
+      .stats-grid { grid-template-columns: 1fr; }
+
+      .benefit-grid, .service-grid { grid-template-columns: 1fr; }
+
+      .benefit { padding: 24px; }
+
+      .service { padding: 23px; }
+
+      .experience-steps { gap: 8px; }
+
+      .experience-step .photo-placeholder { min-height: 145px; }
+
+      .experience-step .placeholder-inner { padding: 9px; }
+
+      .experience-step .placeholder-icon { font-size: 1.4rem; }
+
+      .experience-step .placeholder-inner strong { font-size: .78rem; }
+
+      .experience-step .placeholder-inner small { font-size: .67rem; }
+
+      .contact-form { padding: 22px; }
+
+      .footer-row { align-items: start; flex-direction: column; }
+
+    }
+
+    @media (max-width: 440px) {
+
+      .container { width: calc(100% - 28px); }
+
+      .hero-actions { align-items: stretch; flex-direction: column; }
+
+      .hero-actions .btn { width: 100%; }
+
+      .pillar-grid { grid-template-columns: 1fr; }
+
+      .pillar .photo-placeholder { min-height: 225px; }
+
+      .portfolio-grid { grid-template-columns: 1fr; }
+
+      .portfolio-card .photo-placeholder { min-height: 255px; }
+
+      .stats-card { padding: 22px 17px; }
+
+      .stats-numbers { gap: 10px; }
+
+      .stat strong { font-size: 1.5rem; }
+
+      .stat span { font-size: .7rem; }
+
+      .experience-steps { grid-template-columns: 1fr; }
+
+      .experience-step .photo-placeholder { min-height: 180px; }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html { scroll-behavior: auto; }
+
+      *, *::before, *::after { transition-duration: .01ms !important; }
+
+    }
+
   </style>
+
 </head>
 
 <body>
-  <header>
+
+  <!--
+
+    CONFIGURAÇÃO PRINCIPAL
+
+    Redes, contatos e métricas estão definidos no HTML.
+
+    Para fotos reais, substitua os espaços reservados por imagens
+
+    enviadas ao repositório, usando os caminhos corretos.
+
+  -->
+
+  <header class="site-header">
+
     <div class="container nav">
-      <a class="logo" href="#inicio">CLEITON REIS</a>
-      <a href="#contato">Vamos conversar ↗</a>
+
+      <a class="brand" href="#inicio" aria-label="Cleiton Reis, início">
+
+        <strong>Cleiton Reis</strong>
+
+        <span>Do mar à mesa · Bahia</span>
+
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+
+        aria-label="Abrir menu" aria-expanded="false"
+
+        aria-controls="navLinks">☰</button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+
+        <a href="#inicio">Início</a>
+
+        <a href="#sobre">Sobre</a>
+
+        <a href="#universo">Conteúdo</a>
+
+        <a href="#portfolio">Portfólio</a>
+
+        <a href="#numeros">Números</a>
+
+        <a href="#parcerias">Parcerias</a>
+
+        <a href="#contato" class="nav-cta">Contato comercial ↗</a>
+
+      </nav>
+
     </div>
+
   </header>
 
   <main>
+
+    <!-- 1. ABERTURA -->
+
     <section class="hero" id="inicio">
-      <div class="container hero-content">
-        <div class="eyebrow">Bahia · Ilha de Itaparica</div>
-        <h1>O mar também<br>é trabalho.</h1>
-        <p>
-          Pesca, mergulho e gastronomia autêntica.
-          Histórias reais que conectam pessoas, marcas
-          e experiências à essência do litoral baiano.
-        </p>
-        <a class="button" href="#contato">
-          Conheça meu trabalho ↗
-        </a>
-      </div>
-    </section>
 
-    <section class="stats">
-      <div class="container stats-grid">
-        <div class="stat">
-          <strong>62 mil</strong>
-          <span>Seguidores no Instagram*</span>
-        </div>
-        <div class="stat">
-          <strong>48 mil</strong>
-          <span>Seguidores no TikTok*</span>
-        </div>
-        <div class="stat">
-          <strong>500 mil–1 milhão</strong>
-          <span>Visualizações mensais médias*</span>
-        </div>
-      </div>
-    </section>
+      <div class="container hero-grid">
 
-    <section id="sobre">
-      <div class="container about-grid">
-        <img
-          class="photo"
-          src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=85"
-          alt="Ondas do mar na costa"
-          loading="lazy"
-        >
         <div>
-          <div class="section-label">Sobre o criador</div>
-          <h2>Do mar à mesa.<br>Da experiência à história.</h2>
-          <p class="intro">
-            Sou criador de conteúdo digital, mergulhador e
-            cozinheiro autodidata. Transformo minha conexão
-            com o mar da Ilha de Itaparica em vídeos que
-            mostram a jornada do ingrediente: da pesca
-            subaquática ao preparo de pratos à beira-mar.
+
+          <div class="eyebrow">Criador de conteúdo · Ilha de Itaparica, BA</div>
+
+          <h1>Do mar à mesa. <em>Histórias reais da Bahia.</em></h1>
+
+          <p class="hero-copy">
+
+            Pesca subaquática, gastronomia autêntica e experiências
+
+            que conectam pessoas ao mar da Ilha de Itaparica.
+
           </p>
-          <div class="pill-list">
-            <span class="pill">Pesca subaquática</span>
-            <span class="pill">Gastronomia raiz</span>
-            <span class="pill">Turismo na Bahia</span>
-            <span class="pill">Lifestyle praieiro</span>
+
+          <div class="hero-actions">
+
+            <a class="btn btn-light" href="#portfolio">Conheça meu trabalho ↓</a>
+
+            <a class="btn btn-outline" href="#parcerias">Vamos criar juntos ↗</a>
+
           </div>
+
+          <div class="hero-note"><span></span> A vida real é a minha matéria-prima.</div>
+
         </div>
+
+        <div class="hero-visual">
+
+          <div class="photo-placeholder">
+
+            <div class="placeholder-inner">
+
+              <span class="placeholder-icon">🌊</span>
+
+              <strong>Foto de capa principal</strong>
+
+              <small>Substituir por uma fotografia real e impactante de Cleiton no mar, mergulhando ou cozinhando.</small>
+
+            </div>
+
+          </div>
+
+          <div class="hero-caption">
+
+            <strong>Entre o mar e a cozinha.</strong>
+
+            Uma história contada de dentro para fora, com a identidade da Bahia.
+
+          </div>
+
+        </div>
+
       </div>
+
     </section>
 
-    <section class="dark-section" id="conteudo">
-      <div class="container">
-        <div class="section-label">O que eu faço</div>
-        <h2>Conteúdo que desperta<br>vontade de viver.</h2>
-        <p class="intro">
-          Mais do que divulgar um produto, crio narrativas
-          visuais que aproximam o público de experiências reais.
-        </p>
+    <!-- 2. SOBRE -->
 
-        <div class="cards">
-          <article class="card">
-            <div class="number">01 / MAR</div>
-            <h3>Pesca e mergulho</h3>
-            <p>
-              Aventuras subaquáticas, vida marinha e
-              conexão genuína com o oceano.
-            </p>
-          </article>
+    <section class="section" id="sobre">
 
-          <article class="card">
-            <div class="number">02 / SABOR</div>
-            <h3>Gastronomia autêntica</h3>
-            <p>
-              Peixes, mariscos, moquecas e receitas
-              preparadas ao ar livre.
-            </p>
-          </article>
+      <div class="container about-grid">
 
-          <article class="card">
-            <div class="number">03 / DESTINO</div>
-            <h3>Turismo e experiências</h3>
-            <p>
-              Praias, passeios, hospedagens e lugares
-              especiais da Bahia.
-            </p>
-          </article>
+        <div class="about-photo">
 
-          <article class="card">
-            <div class="number">04 / MARCAS</div>
-            <h3>Publicidade com identidade</h3>
-            <p>
-              Reels, TikTok, Stories, campanhas e
-              parcerias criativas com marcas.
-            </p>
-          </article>
+          <div class="photo-placeholder">
+
+            <div class="placeholder-inner">
+
+              <span class="placeholder-icon">📷</span>
+
+              <strong>Retrato de Cleiton Reis</strong>
+
+              <small>Reservado para uma foto real que represente sua personalidade e seu estilo de vida.</small>
+
+            </div>
+
+          </div>
+
         </div>
+
+        <div class="about-copy">
+
+          <div class="section-label">Quem sou</div>
+
+          <h2>Mais do que conteúdo. Uma experiência real.</h2>
+
+          <p>
+
+            Sou Cleiton Reis, criador de conteúdo digital, mergulhador
+
+            e cozinheiro autodidata da Ilha de Itaparica, Bahia.
+
+          </p>
+
+          <p>
+
+            Transformei minha paixão pelo mar em uma forma de contar
+
+            histórias. Meus vídeos acompanham a jornada do ingrediente,
+
+            do mergulho e da pesca subaquática ao preparo de pratos
+
+            cheios de sabor, sempre em contato direto com a natureza.
+
+          </p>
+
+          <p>
+
+            Entre jangadas, praias, ilhas e cozinhas ao ar livre,
+
+            compartilho a gastronomia regional, as belezas da Bahia e
+
+            um estilo de vida marcado pela liberdade, simplicidade e
+
+            conexão com o mar.
+
+          </p>
+
+          <p>
+
+            Meu conteúdo une aventura, cultura, entretenimento e
+
+            gastronomia em uma linguagem visual autêntica, espontânea
+
+            e envolvente.
+
+          </p>
+
+          <div class="about-signature">O verdadeiro sabor do mar.</div>
+
+        </div>
+
       </div>
+
     </section>
 
-    <section id="portfolio">
+    <!-- 3. UNIVERSO DO CONTEÚDO -->
+
+    <section class="section section-dark" id="universo">
+
       <div class="container">
-        <div class="section-label">Portfólio</div>
-        <h2>Um pouco desse universo.</h2>
-        <p class="intro">
-          Em breve, este espaço terá meus vídeos,
-          produções gastronômicas e experiências com parceiros.
+
+        <div class="section-label">O que eu compartilho</div>
+
+        <h2>Um conteúdo com identidade própria.</h2>
+
+        <p class="lead">
+
+          Quatro universos que se encontram em uma mesma narrativa:
+
+          o mar, os sabores, a cultura local e a experiência de viver a Bahia.
+
         </p>
+
+        <div class="pillar-grid">
+
+          <article class="pillar">
+
+            <div class="photo-placeholder">
+
+              <div class="placeholder-inner">
+
+                <span class="placeholder-icon">🍲</span>
+
+                <strong>Foto de gastronomia</strong>
+
+                <small>Moqueca, frutos do mar ou preparo ao ar livre.</small>
+
+              </div>
+
+            </div>
+
+            <div class="pillar-content">
+
+              <h3>Gastronomia raiz</h3>
+
+              <p>
+
+                Moquecas, mariscadas, peixes, lagostas e receitas
+
+                que valorizam os ingredientes locais e os sabores da Bahia.
+
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="pillar">
+
+            <div class="photo-placeholder">
+
+              <div class="placeholder-inner">
+
+                <span class="placeholder-icon">🤿</span>
+
+                <strong>Foto de mergulho</strong>
+
+                <small>Uma fotografia real de pesca subaquática.</small>
+
+              </div>
+
+            </div>
+
+            <div class="pillar-content">
+
+              <h3>Pesca subaquática e aventura</h3>
+
+              <p>
+
+                O mergulho, as imagens subaquáticas e a beleza do
+
+                ecossistema marinho, com respeito à natureza e à pesca responsável.
+
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="pillar">
+
+            <div class="photo-placeholder">
+
+              <div class="placeholder-inner">
+
+                <span class="placeholder-icon">⛵</span>
+
+                <strong>Foto de turismo</strong>
+
+                <small>Paisagens, embarcações e vida na ilha.</small>
+
+              </div>
+
+            </div>
+
+            <div class="pillar-content">
+
+              <h3>Lifestyle e turismo</h3>
+
+              <p>
+
+                O cotidiano na Ilha de Itaparica, praias, embarcações,
+
+                paisagens e experiências locais.
+
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="pillar">
+
+            <div class="photo-placeholder">
+
+              <div class="placeholder-inner">
+
+                <span class="placeholder-icon">🎬</span>
+
+                <strong>Foto de bastidores</strong>
+
+                <small>Equipamentos, gravações e produção de conteúdo.</small>
+
+              </div>
+
+            </div>
+
+            <div class="pillar-content">
+
+              <h3>Audiovisual imersivo</h3>
+
+              <p>
+
+                Vídeos verticais, sons ambientes, detalhes e edição
+
+                dinâmica para aproximar o público de cada experiência.
+
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 4. PORTFÓLIO -->
+
+    <section class="section" id="portfolio">
+
+      <div class="container">
+
+        <div class="portfolio-head">
+
+          <div>
+
+            <div class="section-label">Trabalhos selecionados</div>
+
+            <h2>Histórias que ganham vida em vídeo.</h2>
+
+            <p class="lead">
+
+              Uma seleção de conteúdos que representam meu olhar,
+
+              minhas experiências e as possibilidades de colaboração.
+
+            </p>
+
+          </div>
+
+          <a class="text-link" href="https://www.instagram.com/oficial.cleitonn/"
+
+             target="_blank" rel="noopener noreferrer">
+
+            Ver perfil no Instagram ↗
+
+          </a>
+
+        </div>
+
+        <div class="filter-list" role="group" aria-label="Filtrar portfólio">
+
+          <button class="filter-btn" data-filter="todos" aria-pressed="true">Todos</button>
+
+          <button class="filter-btn" data-filter="pesca" aria-pressed="false">Pesca subaquática</button>
+
+          <button class="filter-btn" data-filter="gastronomia" aria-pressed="false">Gastronomia</button>
+
+          <button class="filter-btn" data-filter="frutos" aria-pressed="false">Frutos do mar</button>
+
+          <button class="filter-btn" data-filter="turismo" aria-pressed="false">Turismo</button>
+
+          <button class="filter-btn" data-filter="comercial" aria-pressed="false">Comercial</button>
+
+        </div>
 
         <div class="portfolio-grid">
-          <div>
-            <div class="portfolio-item">
-              <img
-                src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=80"
-                alt="Mergulho no mar"
-                loading="lazy"
-              >
-            </div>
-            <div class="portfolio-caption">O universo subaquático</div>
-          </div>
 
-          <div>
-            <div class="portfolio-item">
-              <img
-                src="https://images.unsplash.com/photo-1515003197210-e0cd7184f8b5?auto=format&fit=crop&w=700&q=80"
-                alt="Preparação de comida"
-                loading="lazy"
-              >
-            </div>
-            <div class="portfolio-caption">A cozinha e o sabor</div>
-          </div>
+          <article class="portfolio-card" data-category="pesca">
 
-          <div>
-            <div class="portfolio-item">
-              <img
-                src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=700&q=80"
-                alt="Mar e litoral"
-                loading="lazy"
-              >
+            <div class="photo-placeholder">
+
+              <div class="placeholder-inner">
+
+                <span class="placeholder-icon">🌊</span>
+
+                <strong>Pesca subaquática</strong>
+
+                <small>Adicionar foto ou miniatura de vídeo real.</small>
+
+              </div>
+
             </div>
-            <div class="portfolio-caption">A vida no litoral</div>
-          </div>
+
+            <div class="portfolio-meta">
+
+              <span class="portfolio-category">Pesca subaquática</span>
+
+              <h3>Do mergulho à captura de imagens</h3>
+
+              <p>Espaço para um conteúdo real de pesca e aventura.</p>
+
+            </div>
+
+          </article>
+
+          <article class="portfolio-card" data-category="gastronomia">
+
+            <div class="photo-placeholder">
+
+              <div class="placeholder-inner">
+
+                <span class="placeholder-icon">🔥</span>
+
+                <strong>Receita ao ar livre</strong>
+
+                <small>Adicionar foto ou miniatura de vídeo real.</small>
+
+              </div>
+
+            </div>
+
+            <div class="portfolio-meta">
+
+              <span class="portfolio-category">Gastronomia</span>
+
+              <h3>O sabor da cozinha raiz</h3>
+
+              <p>Espaço para uma receita preparada por você.</p>
+
+            </div>
+
+          </article>
+
+          <article class="portfolio-card" data-category="frutos">
+
+            <div class="photo-placeholder">
+
+              <div class="placeholder-inner">
+
+                <span class="placeholder-icon">🐚</span>
+
+                <strong>Frutos do mar</strong>
+
+                <small>Adicionar foto ou miniatura de vídeo real.</small>
+
+              </div>
+
+            </div>
+
+            <div class="portfolio-meta">
+
+              <span class="portfolio-category">Frutos do mar</span>
+
+              <h3>Do ingrediente ao prato</h3>
+
+              <p>Espaço para um preparo ou prato finalizado.</p>
+
+            </div>
+
+          </article>
+
+          <article class="portfolio-card" data-category="turismo">
+
+            <div class="photo-placeholder">
+
+              <div class="placeholder-inner">
+
+                <span class="placeholder-icon">🏝️</span>
+
+                <strong>Turismo na Bahia</strong>
+
+                <small>Adicionar foto ou miniatura de vídeo real.</small>
+
+              </div>
+
+            </div>
+
+            <div class="portfolio-meta">
+
+              <span class="portfolio-category">Turismo</span>
+
+              <h3>Experiências na ilha</h3>
+
+              <p>Espaço para paisagens, passeios e cotidiano local.</p>
+
+            </div>
+
+          </article>
+
+          <article class="portfolio-card" data-category="comercial">
+
+            <div class="photo-placeholder">
+
+              <div class="placeholder-inner">
+
+                <span class="placeholder-icon">🎥</span>
+
+                <strong>Conteúdo comercial</strong>
+
+                <small>Adicionar campanha real, quando disponível.</small>
+
+              </div>
+
+            </div>
+
+            <div class="portfolio-meta">
+
+              <span class="portfolio-category">Comercial</span>
+
+              <h3>Conteúdo para marcas</h3>
+
+              <p>Espaço para trabalhos comerciais reais autorizados.</p>
+
+            </div>
+
+          </article>
+
+          <article class="portfolio-card" data-category="gastronomia">
+
+            <div class="photo-placeholder">
+
+              <div class="placeholder-inner">
+
+                <span class="placeholder-icon">🍽️</span>
+
+                <strong>Experiência gastronômica</strong>
+
+                <small>Adicionar foto ou miniatura de vídeo real.</small>
+
+              </div>
+
+            </div>
+
+            <div class="portfolio-meta">
+
+              <span class="portfolio-category">Gastronomia</span>
+
+              <h3>Sabores e histórias</h3>
+
+              <p>Espaço para uma experiência culinária real.</p>
+
+            </div>
+
+          </article>
+
         </div>
+
+        <p class="portfolio-note">
+
+          Os cartões acima são espaços reservados. Eles não representam
+
+          campanhas, vídeos ou resultados comerciais já realizados.
+
+          Os links individuais serão adicionados quando os conteúdos forem selecionados.
+
+        </p>
+
       </div>
+
     </section>
 
-    <section class="collab" id="contato">
-      <div class="container collab-box">
-        <div class="section-label">Parcerias comerciais</div>
-        <h2>Vamos criar algo verdadeiro?</h2>
-        <p class="intro">
-          Estou disponível para campanhas com marcas,
-          restaurantes, pousadas, turismo e experiências.
-          Cada parceria é pensada de acordo com os objetivos
-          e a identidade de quem participa.
+    <!-- 5. NÚMEROS -->
+
+    <section class="section section-dark" id="numeros">
+
+      <div class="container">
+
+        <div class="stats-intro">
+
+          <div>
+
+            <div class="section-label">Presença digital</div>
+
+            <h2>Uma comunidade que acompanha cada experiência.</h2>
+
+          </div>
+
+          <p class="lead">
+
+            Uma presença digital construída em torno da pesca,
+
+            da gastronomia e do estilo de vida na Bahia.
+
+          </p>
+
+        </div>
+
+        <div class="stats-grid">
+
+          <article class="stats-card">
+
+            <div class="stats-platform">
+
+              <h3>Instagram</h3>
+
+              <span>@oficial.cleitonn</span>
+
+            </div>
+
+            <div class="stats-numbers">
+
+              <div class="stat">
+
+                <strong>62 mil</strong>
+
+                <span>Seguidores</span>
+
+              </div>
+
+              <div class="stat">
+
+                <strong>200 mil</strong>
+
+                <span>Alcance médio informado</span>
+
+              </div>
+
+              <div class="stat">
+
+                <strong>500 mil–1 mi</strong>
+
+                <span>Visualizações mensais</span>
+
+              </div>
+
+            </div>
+
+            <a class="btn btn-outline" style="margin-top:24px"
+
+               href="https://www.instagram.com/oficial.cleitonn/"
+
+               target="_blank" rel="noopener noreferrer">Visitar Instagram ↗</a>
+
+          </article>
+
+          <article class="stats-card">
+
+            <div class="stats-platform">
+
+              <h3>TikTok</h3>
+
+              <span>@cleiton_reiss</span>
+
+            </div>
+
+            <div class="stats-numbers">
+
+              <div class="stat">
+
+                <strong>48 mil</strong>
+
+                <span>Seguidores</span>
+
+              </div>
+
+              <div class="stat">
+
+                <strong>100 mil</strong>
+
+                <span>Alcance médio informado</span>
+
+              </div>
+
+              <div class="stat">
+
+                <strong>500 mil</strong>
+
+                <span>Visualizações mensais</span>
+
+              </div>
+
+            </div>
+
+            <a class="btn btn-outline" style="margin-top:24px"
+
+               href="https://www.tiktok.com/@cleiton_reiss"
+
+               target="_blank" rel="noopener noreferrer">Visitar TikTok ↗</a>
+
+          </article>
+
+        </div>
+
+        <p class="stats-footnote">
+
+          Métricas informadas no mídia kit. Não são dados verificados
+
+          em tempo real e podem mudar conforme o período de análise.
+
         </p>
-        <a
-          class="button"
-          href="https://www.instagram.com/cleiton.reiss/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Entre em contato pelo Instagram ↗
-        </a>
+
       </div>
+
     </section>
+
+    <!-- 6. DIFERENCIAIS -->
+
+    <section class="section" id="diferenciais">
+
+      <div class="container">
+
+        <div class="section-label">O que torna o trabalho diferente</div>
+
+        <h2>Conteúdo que aproxima marcas de experiências reais.</h2>
+
+        <p class="lead">
+
+          Em vez de apresentar apenas um produto, a proposta é
+
+          contextualizar a marca em uma história autêntica, visual
+
+          e conectada à cultura regional.
+
+        </p>
+
+        <div class="benefit-grid">
+
+          <article class="benefit">
+
+            <span class="benefit-number">01</span>
+
+            <h3>Conexão real</h3>
+
+            <p>
+
+              Conteúdos que aproximam o público de experiências,
+
+              sabores, paisagens e momentos genuínos.
+
+            </p>
+
+          </article>
+
+          <article class="benefit">
+
+            <span class="benefit-number">02</span>
+
+            <h3>Força visual</h3>
+
+            <p>
+
+              O universo subaquático, o preparo dos alimentos
+
+              e as paisagens naturais criam uma linguagem visual própria.
+
+            </p>
+
+          </article>
+
+          <article class="benefit">
+
+            <span class="benefit-number">03</span>
+
+            <h3>Afinidade com diferentes segmentos</h3>
+
+            <p>
+
+              Gastronomia, pesca, mergulho, turismo, hospedagem,
+
+              náutica, equipamentos e lifestyle.
+
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 7. SOLUÇÕES COMERCIAIS -->
+
+    <section class="section section-dark" id="parcerias">
+
+      <div class="container">
+
+        <div class="section-label">Soluções comerciais</div>
+
+        <h2>Vamos transformar sua marca em uma experiência?</h2>
+
+        <p class="lead">
+
+          Desenvolvemos a ideia, o formato e as entregas em conjunto,
+
+          considerando a identidade da marca e os objetivos da campanha.
+
+        </p>
+
+        <div class="service-grid">
+
+          <article class="service">
+
+            <span class="service-icon">◈</span>
+
+            <h3>Criação de conteúdo para marcas</h3>
+
+            <p>
+
+              Vídeos e conteúdos para apresentar produtos,
+
+              serviços e experiências de forma natural.
+
+            </p>
+
+          </article>
+
+          <article class="service">
+
+            <span class="service-icon">▣</span>
+
+            <h3>Reels, TikTok e Stories</h3>
+
+            <p>
+
+              Conteúdos verticais com formatos definidos conforme
+
+              a campanha e seus objetivos.
+
+            </p>
+
+          </article>
+
+          <article class="service">
+
+            <span class="service-icon">♨</span>
+
+            <h3>Gastronomia e restaurantes</h3>
+
+            <p>
+
+              Histórias audiovisuais que conectam ingredientes,
+
+              preparo, ambiente e identidade do estabelecimento.
+
+            </p>
+
+          </article>
+
+          <article class="service">
+
+            <span class="service-icon">⌁</span>
+
+            <h3>Turismo e hospedagem</h3>
+
+            <p>
+
+              Conteúdos que apresentam destinos, pousadas,
+
+              passeios e experiências locais.
+
+            </p>
+
+          </article>
+
+          <article class="service">
+
+            <span class="service-icon">✳</span>
+
+            <h3>Eventos e experiências presenciais</h3>
+
+            <p>
+
+              Participação e produção de conteúdo para eventos,
+
+              ativações e experiências de marca.
+
+            </p>
+
+          </article>
+
+          <article class="service">
+
+            <span class="service-icon">↻</span>
+
+            <h3>Campanhas recorrentes</h3>
+
+            <p>
+
+              Parcerias de longo prazo com planejamento,
+
+              formatos e entregas acordados em conjunto.
+
+            </p>
+
+          </article>
+
+        </div>
+
+        <div class="services-cta">
+
+          <p class="lead">
+
+            Valores sob consulta, conforme entregas, complexidade,
+
+            duração, deslocamento e direitos de utilização do conteúdo.
+
+          </p>
+
+          <a class="btn btn-light" href="#contato"
+
+             data-whatsapp-message="Olá, Cleiton! Conheci seu site e gostaria de conversar sobre uma proposta comercial.">
+
+            Solicitar proposta comercial ↗
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 8. PROJETO DO MAR À MESA -->
+
+    <section class="section" id="do-mar-a-mesa">
+
+      <div class="container experience-grid">
+
+        <div class="experience-copy">
+
+          <div class="section-label">Projeto autoral</div>
+
+          <h2>Do mar à mesa: uma experiência que conta uma história.</h2>
+
+          <p>
+
+            Uma experiência que começa no mar e termina à mesa.
+
+            A proposta conecta pesca, ingredientes frescos, gastronomia
+
+            e identidade local em um conteúdo que apresenta não apenas
+
+            um prato, mas todo o caminho até ele.
+
+          </p>
+
+          <p>
+
+            Em colaboração com restaurantes, a experiência pode envolver
+
+            a apresentação de um pescado, o preparo de uma receita e o
+
+            registro audiovisual do ambiente, da equipe e do resultado final.
+
+          </p>
+
+          <p>
+
+            A proposta é criar conteúdo original que valorize a gastronomia,
+
+            o estabelecimento e a experiência de quem acompanha.
+
+          </p>
+
+          <a class="btn" href="#contato"
+
+             data-whatsapp-message="Olá, Cleiton! Tenho interesse em conversar sobre o projeto Do mar à mesa para meu restaurante.">
+
+            Quero levar essa experiência ao meu restaurante ↗
+
+          </a>
+
+        </div>
+
+        <div>
+
+          <div class="experience-steps">
+
+            <div class="experience-step">
+
+              <div class="photo-placeholder">
+
+                <div class="placeholder-inner">
+
+                  <span class="placeholder-icon">🌊</span>
+
+                  <strong>01 · Origem</strong>
+
+                  <small>O mar e o ingrediente.</small>
+
+                </div>
+
+              </div>
+
+              <span>Do mar</span>
+
+            </div>
+
+            <div class="experience-step">
+
+              <div class="photo-placeholder">
+
+                <div class="placeholder-inner">
+
+                  <span class="placeholder-icon">🔥</span>
+
+                  <strong>02 · Preparo</strong>
+
+                  <small>A cozinha e a receita.</small>
+
+                </div>
+
+              </div>
+
+              <span>À cozinha</span>
+
+            </div>
+
+            <div class="experience-step">
+
+              <div class="photo-placeholder">
+
+                <div class="placeholder-inner">
+
+                  <span class="placeholder-icon">🍽️</span>
+
+                  <strong>03 · Experiência</strong>
+
+                  <small>O prato e o ambiente.</small>
+
+                </div>
+
+              </div>
+
+              <span>À mesa</span>
+
+            </div>
+
+          </div>
+
+          <p class="portfolio-note">
+
+            Projeto apresentado como proposta de colaboração,
+
+            sem pressupor parcerias confirmadas.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 9. CONTATO -->
+
+    <section class="section section-dark" id="contato">
+
+      <div class="container contact-grid">
+
+        <div class="contact-copy">
+
+          <div class="section-label">Contato comercial</div>
+
+          <h2>Vamos criar juntos?</h2>
+
+          <p>
+
+            Sua marca, seu espaço ou seu projeto pode fazer parte de uma
+
+            história que conecta o mar, a gastronomia e as experiências reais
+
+            da Bahia.
+
+          </p>
+
+          <p>
+
+            Entre em contato para conversar sobre formatos, ideias
+
+            e possibilidades de parceria.
+
+          </p>
+
+          <div class="contact-list">
+
+            <div class="contact-item">
+
+              <span>WhatsApp comercial</span>
+
+              <a href="https://wa.me/5571992535801"
+
+                 target="_blank" rel="noopener noreferrer">
+
+                +55 71 99253-5801 ↗
+
+              </a>
+
+            </div>
+
+            <div class="contact-item">
+
+              <span>E-mail</span>
+
+              <a href="mailto:oficialcleitonreis@gmail.com">
+
+                oficialcleitonreis@gmail.com
+
+              </a>
+
+            </div>
+
+            <div class="contact-item">
+
+              <span>Instagram</span>
+
+              <a href="https://www.instagram.com/oficial.cleitonn/"
+
+                 target="_blank" rel="noopener noreferrer">
+
+                @oficial.cleitonn ↗
+
+              </a>
+
+            </div>
+
+            <div class="contact-item">
+
+              <span>TikTok</span>
+
+              <a href="https://www.tiktok.com/@cleiton_reiss"
+
+                 target="_blank" rel="noopener noreferrer">
+
+                @cleiton_reiss ↗
+
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="contact-socials">
+
+            <a class="btn btn-outline" href="https://wa.me/5571992535801"
+
+               target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+
+            <a class="btn btn-outline" href="mailto:oficialcleitonreis@gmail.com">E-mail ↗</a>
+
+          </div>
+
+        </div>
+
+        <form class="contact-form" id="contactForm">
+
+          <h3>Vamos conversar sobre seu projeto.</h3>
+
+          <p class="form-help">
+
+            Preencha os campos e prepare uma mensagem para enviar diretamente pelo WhatsApp.
+
+          </p>
+
+          <div class="field">
+
+            <label for="name">Seu nome *</label>
+
+            <input id="name" name="name" autocomplete="name"
+
+                   placeholder="Como podemos te chamar?" required>
+
+          </div>
+
+          <div class="field">
+
+            <label for="company">Empresa ou marca</label>
+
+            <input id="company" name="company" autocomplete="organization"
+
+                   placeholder="Nome da empresa">
+
+          </div>
+
+          <div class="field">
+
+            <label for="reply">Seu e-mail ou WhatsApp *</label>
+
+            <input id="reply" name="reply"
+
+                   placeholder="Como podemos responder?" required>
+
+          </div>
+
+          <div class="field">
+
+            <label for="type">Tipo de parceria *</label>
+
+            <select id="type" name="type" required>
+
+              <option value="">Selecione uma opção</option>
+
+              <option>Conteúdo para marca</option>
+
+              <option>Restaurante e gastronomia</option>
+
+              <option>Turismo e hospedagem</option>
+
+              <option>Evento ou experiência</option>
+
+              <option>Campanha recorrente</option>
+
+              <option>Projeto Do mar à mesa</option>
+
+              <option>Outra proposta</option>
+
+            </select>
+
+          </div>
+
+          <div class="field">
+
+            <label for="message">Conte um pouco sobre sua ideia *</label>
+
+            <textarea id="message" name="message"
+
+              placeholder="Objetivo, local, prazo ou formato desejado..."
+
+              required></textarea>
+
+          </div>
+
+          <button class="btn btn-light" type="submit">
+
+            Preparar mensagem no WhatsApp ↗
+
+          </button>
+
+          <p class="form-disclaimer">
+
+            O formulário não envia dados automaticamente nem armazena suas
+
+            informações. Ao enviar, o WhatsApp será aberto com a mensagem
+
+            preenchida para você revisar e enviar.
+
+          </p>
+
+          <p id="formStatus" role="status" aria-live="polite"></p>
+
+        </form>
+
+      </div>
+
+    </section>
+
   </main>
 
-  <footer>
-    <div class="container">
-      <p>© <span id="year"></span> Cleiton Reis · Bahia, Brasil</p>
-      <p>*Estatísticas informadas no mídia kit. Atualize os números conforme sua audiência atual.</p>
+  <!-- 10. RODAPÉ -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-row">
+
+      <div>
+
+        <div class="footer-brand">Cleiton Reis</div>
+
+        <p>Criador de conteúdo digital · Ilha de Itaparica, Bahia</p>
+
+        <p>© <span id="year"></span> Cleiton Reis. Todos os direitos reservados.</p>
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="https://www.instagram.com/oficial.cleitonn/"
+
+           target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+
+        <a href="https://www.tiktok.com/@cleiton_reiss"
+
+           target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+
+        <a href="https://wa.me/5571992535801"
+
+           target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+
+        <a href="mailto:oficialcleitonreis@gmail.com">E-mail</a>
+
+        <a href="#inicio">Voltar ao início ↑</a>
+
+      </div>
+
     </div>
+
   </footer>
 
   <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+
+    // Ano automático no rodapé
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Menu para celulares
+
+    const menuToggle = document.getElementById("menuToggle");
+
+    const navLinks = document.getElementById("navLinks");
+
+    function closeMenu() {
+
+      navLinks.classList.remove("open");
+
+      document.body.classList.remove("menu-open");
+
+      menuToggle.setAttribute("aria-expanded", "false");
+
+      menuToggle.setAttribute("aria-label", "Abrir menu");
+
+      menuToggle.textContent = "☰";
+
+    }
+
+    menuToggle.addEventListener("click", () => {
+
+      const isOpen = navLinks.classList.toggle("open");
+
+      document.body.classList.toggle("menu-open", isOpen);
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+
+      menuToggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+
+      link.addEventListener("click", closeMenu);
+
+    });
+
+    // Filtros do portfólio
+
+    const filterButtons = document.querySelectorAll(".filter-btn");
+
+    const portfolioCards = document.querySelectorAll(".portfolio-card");
+
+    filterButtons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach(item => {
+
+          item.setAttribute("aria-pressed", String(item === button));
+
+        });
+
+        portfolioCards.forEach(card => {
+
+          const matches = filter === "todos" ||
+
+            card.dataset.category === filter;
+
+          card.hidden = !matches;
+
+        });
+
+      });
+
+    });
+
+    // Botões de parceria com mensagem pré-preenchida
+
+    document.querySelectorAll("[data-whatsapp-message]").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        const message = link.dataset.whatsappMessage;
+
+        link.href = "https://wa.me/5571992535801?text=" +
+
+          encodeURIComponent(message);
+
+      });
+
+    });
+
+    // Formulário: prepara mensagem, mas não envia nem armazena dados.
+
+    const contactForm = document.getElementById("contactForm");
+
+    const formStatus = document.getElementById("formStatus");
+
+    contactForm.addEventListener("submit", event => {
+
+      event.preventDefault();
+
+      if (!contactForm.reportValidity()) return;
+
+      const data = new FormData(contactForm);
+
+      const message = [
+
+        "Olá, Cleiton! Gostaria de conversar sobre uma parceria.",
+
+        "",
+
+        "Nome: " + data.get("name"),
+
+        "Empresa/marca: " + (data.get("company") || "Não informado"),
+
+        "Contato para retorno: " + data.get("reply"),
+
+        "Tipo de parceria: " + data.get("type"),
+
+        "Mensagem: " + data.get("message")
+
+      ].join("\n");
+
+      const url = "https://wa.me/5571992535801?text=" +
+
+        encodeURIComponent(message);
+
+      formStatus.textContent =
+
+        "O WhatsApp será aberto para você revisar e enviar sua mensagem.";
+
+      window.open(url, "_blank", "noopener,noreferrer");
+
+    });
+
   </script>
+
 </body>
+
 </html>
