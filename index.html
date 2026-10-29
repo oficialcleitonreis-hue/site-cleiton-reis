@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b2438">
+  <meta name="description" content="Cleiton Reis — criador de conteúdo na Ilha de Itaparica. Pesca subaquática, gastronomia, praias e experiências na Bahia.">
+  <title>Cleiton Reis | O mar também é trabalho</title>
+
+  <style>
+    :root {
+      --navy: #0b2438;
+      --blue: #176b87;
+      --aqua: #bce8e8;
+      --cream: #f7f6f0;
+      --white: #ffffff;
+      --muted: #667985;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: var(--navy);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 22px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    .nav a:last-child {
+      border: 1px solid #8ab9c6;
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+    }
+
+    .hero {
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(5, 25, 40, .9),
+        rgba(5, 25, 40, .25)),
+        url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      padding: 85px 0;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--aqua);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 9vw, 82px);
+      line-height: 1.03;
+      letter-spacing: -3px;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      max-width: 530px;
+      color: #e1eeee;
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--aqua);
+      color: var(--navy);
+      padding: 13px 22px;
+      border-radius: 30px;
+      font-weight: 750;
+      font-size: 14px;
+      transition: transform .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-label {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(29px, 5vw, 44px);
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .stats {
+      background: var(--white);
+      padding: 35px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: clamp(25px, 5vw, 38px);
+      letter-spacing: -1px;
+    }
+
+    .stat span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .photo {
+      width: 100%;
+      min-height: 330px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 25px;
+    }
+
+    .pill {
+      padding: 8px 13px;
+      border: 1px solid #d0dddc;
+      border-radius: 30px;
+      font-size: 12px;
+    }
+
+    .dark-section {
+      background: var(--navy);
+      color: white;
+    }
+
+    .dark-section .intro {
+      color: #c4d7df;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .card {
+      padding: 28px;
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .13);
+      border-radius: 5px;
+    }
+
+    .card .number {
+      font-size: 12px;
+      color: var(--aqua);
+      letter-spacing: 2px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin: 12px 0;
+    }
+
+    .card p {
+      color: #c4d7df;
+      font-size: 14px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 32px;
+    }
+
+    .portfolio-item {
+      min-height: 190px;
+      background: #dbe7e6;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      min-height: 190px;
+      object-fit: cover;
+      display: block;
+      transition: transform .4s;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .portfolio-caption {
+      padding: 12px 0;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .collab {
+      background: #e5efeb;
+    }
+
+    .collab-box {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .collab-box .intro {
+      margin: 0 auto 28px;
+    }
+
+    footer {
+      padding: 32px 0;
+      background: #071925;
+      color: #d8e6e9;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    footer p + p {
+      margin-top: 7px;
+      color: #93acb6;
+    }
+
+    @media (max-width: 650px) {
+      .hero {
+        min-height: 470px;
+      }
+
+      .about-grid,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .photo {
+        min-height: 250px;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#inicio">CLEITON REIS</a>
+      <a href="#contato">Vamos conversar ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <div class="eyebrow">Bahia · Ilha de Itaparica</div>
+        <h1>O mar também<br>é trabalho.</h1>
+        <p>
+          Pesca, mergulho e gastronomia autêntica.
+          Histórias reais que conectam pessoas, marcas
+          e experiências à essência do litoral baiano.
+        </p>
+        <a class="button" href="#contato">
+          Conheça meu trabalho ↗
+        </a>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat">
+          <strong>62 mil</strong>
+          <span>Seguidores no Instagram*</span>
+        </div>
+        <div class="stat">
+          <strong>48 mil</strong>
+          <span>Seguidores no TikTok*</span>
+        </div>
+        <div class="stat">
+          <strong>500 mil–1 milhão</strong>
+          <span>Visualizações mensais médias*</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container about-grid">
+        <img
+          class="photo"
+          src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=85"
+          alt="Ondas do mar na costa"
+          loading="lazy"
+        >
+        <div>
+          <div class="section-label">Sobre o criador</div>
+          <h2>Do mar à mesa.<br>Da experiência à história.</h2>
+          <p class="intro">
+            Sou criador de conteúdo digital, mergulhador e
+            cozinheiro autodidata. Transformo minha conexão
+            com o mar da Ilha de Itaparica em vídeos que
+            mostram a jornada do ingrediente: da pesca
+            subaquática ao preparo de pratos à beira-mar.
+          </p>
+          <div class="pill-list">
+            <span class="pill">Pesca subaquática</span>
+            <span class="pill">Gastronomia raiz</span>
+            <span class="pill">Turismo na Bahia</span>
+            <span class="pill">Lifestyle praieiro</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="conteudo">
+      <div class="container">
+        <div class="section-label">O que eu faço</div>
+        <h2>Conteúdo que desperta<br>vontade de viver.</h2>
+        <p class="intro">
+          Mais do que divulgar um produto, crio narrativas
+          visuais que aproximam o público de experiências reais.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="number">01 / MAR</div>
+            <h3>Pesca e mergulho</h3>
+            <p>
+              Aventuras subaquáticas, vida marinha e
+              conexão genuína com o oceano.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="number">02 / SABOR</div>
+            <h3>Gastronomia autêntica</h3>
+            <p>
+              Peixes, mariscos, moquecas e receitas
+              preparadas ao ar livre.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="number">03 / DESTINO</div>
+            <h3>Turismo e experiências</h3>
+            <p>
+              Praias, passeios, hospedagens e lugares
+              especiais da Bahia.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="number">04 / MARCAS</div>
+            <h3>Publicidade com identidade</h3>
+            <p>
+              Reels, TikTok, Stories, campanhas e
+              parcerias criativas com marcas.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-label">Portfólio</div>
+        <h2>Um pouco desse universo.</h2>
+        <p class="intro">
+          Em breve, este espaço terá meus vídeos,
+          produções gastronômicas e experiências com parceiros.
+        </p>
+
+        <div class="portfolio-grid">
+          <div>
+            <div class="portfolio-item">
+              <img
+                src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=80"
+                alt="Mergulho no mar"
+                loading="lazy"
+              >
+            </div>
+            <div class="portfolio-caption">O universo subaquático</div>
+          </div>
+
+          <div>
+            <div class="portfolio-item">
+              <img
+                src="https://images.unsplash.com/photo-1515003197210-e0cd7184f8b5?auto=format&fit=crop&w=700&q=80"
+                alt="Preparação de comida"
+                loading="lazy"
+              >
+            </div>
+            <div class="portfolio-caption">A cozinha e o sabor</div>
+          </div>
+
+          <div>
+            <div class="portfolio-item">
+              <img
+                src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=700&q=80"
+                alt="Mar e litoral"
+                loading="lazy"
+              >
+            </div>
+            <div class="portfolio-caption">A vida no litoral</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="collab" id="contato">
+      <div class="container collab-box">
+        <div class="section-label">Parcerias comerciais</div>
+        <h2>Vamos criar algo verdadeiro?</h2>
+        <p class="intro">
+          Estou disponível para campanhas com marcas,
+          restaurantes, pousadas, turismo e experiências.
+          Cada parceria é pensada de acordo com os objetivos
+          e a identidade de quem participa.
+        </p>
+        <a
+          class="button"
+          href="https://www.instagram.com/cleiton.reiss/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Entre em contato pelo Instagram ↗
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Cleiton Reis · Bahia, Brasil</p>
+      <p>*Estatísticas informadas no mídia kit. Atualize os números conforme sua audiência atual.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
