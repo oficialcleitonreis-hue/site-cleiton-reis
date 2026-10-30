@@ -3018,6 +3018,45 @@
 
   <script>
 
+    // INTEGRAÇÃO DAS FOTOGRAFIAS DO SITE
+    const imagensSite = {
+      "Foto de capa principal": "retrato-cleiton-reis.jpg",
+      "Retrato de Cleiton Reis": "retrato-cleiton-reis.jpg",
+      "Foto de gastronomia": "foto-gastronomia.jpg",
+      "Foto de mergulho": "foto-mergulho.jpg",
+      "Foto de turismo": "foto-turismo.jpg",
+      "Foto de bastidores": "foto-bastidores.jpg",
+      "Pesca subaquática": "foto-pesca-subaquatica.jpg",
+      "Receita ao ar livre": "receita-ao-ar-livre.jpg",
+      "Frutos do mar": "foto-frutos-do-mar.jpg",
+      "Turismo na Bahia": "foto-turismo-bahia.jpg",
+      "Conteúdo comercial": "foto-conteudo-comercial.jpg",
+      "Experiência gastronômica": "foto-experiencia-gastronomica.jpg",
+      "01 · Origem": "foto-01-origem.jpg",
+      "02 · Preparo": "foto-02-preparo.jpg",
+      "03 · Experiência": "foto-03-experiencia.jpg"
+    };
+
+    document.querySelectorAll(".photo-placeholder").forEach(area => {
+      const titulo = area.querySelector(".placeholder-inner strong");
+      if (!titulo) return;
+
+      const arquivo = imagensSite[titulo.textContent.trim()];
+      if (!arquivo) return;
+
+      const img = document.createElement("img");
+      img.src = "fotos/" + arquivo;
+      img.alt = titulo.textContent.trim();
+      img.loading = "lazy";
+
+      img.onerror = () => {
+        console.error("Imagem não encontrada: " + img.src);
+      };
+
+      area.appendChild(img);
+      area.classList.add("has-image");
+    });
+
     // Ano automático no rodapé
 
     document.getElementById("year").textContent = new Date().getFullYear();
