@@ -1,1 +1,0 @@
-fotos/nome-da-foto.jpg.
